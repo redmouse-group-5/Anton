@@ -1,6 +1,5 @@
 #Описание функции third()
 def third(x):
 	"""Если введено от 4 до 6 - возвести число в степень, указанную пользователе"""
-	for i in range(10):
-		x+=1
-		print(x)
+	res = [i+x for i in range(10)] 
+	print(res)
