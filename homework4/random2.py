@@ -9,17 +9,18 @@
 import random
 import re
 
-#генерируем список с рандомными символами
-xlist = random.sample('abcdefghijklmnopqrstuvwxyz1234567890',36)
+#генерируем стиринговый список с рандомными символами
+xlist = str(random.sample('abcdefghijklmnopqrstuvwxyz1234567890',36))
 
-xstring = ''
-#делаем его стрингом
-xstring.join(xlist, sep=None)
+#удаляем лишние сиволы
+xstring = xlist[2::5]
 
+#выводим для удобства проверки
 print (xstring)
 xinput = input('Введите символы:\n')
 
-if re.match(xinput, xstring):
+#если введенное значение содержится в строке, то выводим ее инвертированное значение
+if re.findall(xinput, xstring):
 	print (xinput[::-1])
 
 
