@@ -16,27 +16,27 @@ class Main():
         выполнять функцию класса"""
 		if 1<=x<=3:
 			#Производим вызов метода mfirst при соблюдении условия
-			self.new = Main.mfirst(x)
+			new = self.mfirst(x)
 		elif 4<=x<=6:
 			#Производим вызов метода msecond при соблюдении условия
-			self.new = Main.msecond(x)
+			new = self.msecond(x)
 		elif 7<=x<=9:
 			#Производим вызов метода mthird при соблюдении условия
-			self.new = Main.mthird(x)
+			new = self.mthird(x)
 		else: print('Ошибка ввода!!!')
 			
     #Методы, в которых вызываем функции из модулей
-	def mfirst(self):
+	def mfirst(self,x):
 		"""Вывести все функции функциями класса"""
 		atrFirst = func1.first(x)
 		return atrFirst
 
-	def msecond(self):
+	def msecond(self,x):
 		"""Вывести все функции функциями класса"""
 		atrSecond = func2.second(x)
 		return atrSecond
 
-	def mthird(self):
+	def mthird(self,x):
 		"""Вывести все функции функциями класса"""
 		atrThird = func3.third(x)
 		return atrThird
